@@ -30,9 +30,10 @@ public class Cheese {
     private List<Menu> menus;
 
 
-    public Cheese(String name, String description) {
+    public Cheese(String name, String description, Category category) {
         this.name = name;
         this.description = description;
+        this.category = category;
     }
 
     public Cheese() { }

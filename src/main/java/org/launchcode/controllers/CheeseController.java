@@ -30,7 +30,7 @@ public class CheeseController {
     private CategoryDao categoryDao;
 
 
-    // Request path: /cheese
+
     @RequestMapping(value = "")
     public String index(Model model) {
 
@@ -53,6 +53,7 @@ public class CheeseController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Cheese");
+            model.addAttribute("categories", categoryDao.findAll());
             return "cheese/add";
         }
         Category cat = categoryDao.findOne(categoryId);
