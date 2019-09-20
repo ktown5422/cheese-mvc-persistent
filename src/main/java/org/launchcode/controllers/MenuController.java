@@ -55,10 +55,10 @@ public class MenuController {
         }
     }
 
-    @RequestMapping(value = "view/{menuId}")
-    public String viewMenu(@PathVariable("menuId") int menuId, Model model){
-        Menu theMenu = menuDao.findOne(menuId);
-        model.addAttribute("title", theMenu.getName() );
+    @RequestMapping(value = "view/{id}")
+    public String viewMenu(Model model, @PathVariable int id){
+        Menu theMenu = menuDao.findOne(id);
+        model.addAttribute("title", theMenu.getName());
         model.addAttribute("menu", theMenu);
 
         return "menu/view";

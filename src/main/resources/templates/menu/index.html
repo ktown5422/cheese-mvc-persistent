@@ -8,6 +8,7 @@
 
         <nav th:replace="fragments :: navigation"></nav>
 
+        <p th:unless="${menus} and ${menus.size()}">Mo menus</p>
 
         <ul>
             <li th:each="menu :${menus}">
@@ -15,7 +16,7 @@
             </li>
         </ul>
 
-        <p><a href="menu/add">Add Menu</a></p>
+        <a th:href="@{menu/add}">Add Menu</a>
 
     </body>
 </html>

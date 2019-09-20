@@ -34,13 +34,14 @@ public class Menu {
         cheeses.add(item);
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
+
     public Menu(String name){
         this.name = name;
     }
